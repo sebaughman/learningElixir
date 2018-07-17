@@ -4,8 +4,8 @@ defmodule Discuss.AuthController do
 
     alias Discuss.User
 
-    def callback(conn, params) do
-        %{assigns: %{ueberauth_auth: %{credentials: %{token: token}, info: %{email: email}, provider: provider}}} = conn
+    def callback(conn, _params) do
+        %{assigns: %{ueberauth_auth: %{credentials: %{token: token}, info: %{email: email}}}} = conn
         user_params = %{token: token, email: email, provider: "google"}
         changeset = User.changeset(%User{}, user_params)
 
