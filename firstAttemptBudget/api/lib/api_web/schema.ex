@@ -35,9 +35,11 @@ defmodule ApiWeb.Schema do
     field :all_users, list_of(:user) do 
       resolve &AccountsResolver.all_users/3
     end
+
     field :user_budgets, list_of(:budget) do 
       arg :user_id, non_null(:integer)
       resolve &MoneyManagementResolver.user_budgets/2
-    end
+    end   
   end
+
 end

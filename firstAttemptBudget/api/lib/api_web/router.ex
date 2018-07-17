@@ -3,15 +3,21 @@ defmodule ApiWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug CORSPlug, [origin: "http://localhost:3000"]
   end
 
-  scope "/", ApiWeb do
+  scope "/" do
     pipe_through :api
 
- 
-  end
-     forward "/graphiql", Absinthe.Plug.GraphiQL,
+     forward "/graphql", Absinthe.Plug,
       schema: ApiWeb.Schema,
       interface: :simple,
       context: %{pubsub: ApiWeb.Endpoint}
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: ApiWeb.Schema,
+      interface: :simple,
+      context: %{pubsub: ApiWeb.Endpoint}
+  end
+
 end

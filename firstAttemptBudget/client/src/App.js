@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
+
 class App extends Component {
+
+  componentDidMount(){
+    console.log(this.props)
+  }
   render() {
     return (
       <div className="App">
@@ -18,4 +25,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const usersQuery = gql`
+          query {
+            allUsers{
+              name
+            }
+          }
+          `
+
+export default graphql(usersQuery, { name: 'usersQry' })(App);
