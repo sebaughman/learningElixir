@@ -8,6 +8,7 @@ defmodule Discuss.User do
         field :provider, :string
         field :token, :string
         has_many :topics, Topic
+        has_many :comments, Discuss.Comment
 
         #timestamps() --- forgot to add before running ecto.mirgrate. need to run it again
     end
