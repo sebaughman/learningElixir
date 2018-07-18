@@ -36,11 +36,13 @@ defmodule Back.Mixfile do
       {:phoenix, "~> 1.3.3"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
-      {:postgrex, ">= 0.0.0"},
+      {:postgrex, "~> 0.11"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:absinthe_ecto, "~> 0.1.0"},
       {:absinthe_plug, "~> 1.3.0"},
+      {:cors_plug, "~> 1.5"},
+      {:ecto, "~> 2.1"}
     ]
   end
 

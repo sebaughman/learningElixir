@@ -1,5 +1,6 @@
 defmodule Back.Kid do
-    use BackWeb :model
+  use BackWeb, :model
+  use Ecto.Schema
 
     schema "kids" do
         field :name, :string

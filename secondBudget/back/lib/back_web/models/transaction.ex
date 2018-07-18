@@ -1,7 +1,8 @@
-defmodule Back.Tansaction do
-    use BackWeb :model
+defmodule Back.Transaction do
+      use BackWeb, :model
+      use Ecto.Schema
 
-    schema "users" do
+    schema "transactions" do
         field :transaction_amount, :decimal
         belongs_to :kid, Back.Kid 
         belongs_to :category, Back.Category 

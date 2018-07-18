@@ -1,5 +1,6 @@
 defmodule Back.User do
-    use BackWeb :model
+      use BackWeb, :model
+      use Ecto.Schema
 
     schema "users" do
         field :name, :string

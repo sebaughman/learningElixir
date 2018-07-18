@@ -1,11 +1,11 @@
-defmodule Back.User do
-    use BackWeb :model
+defmodule Back.Category do
+      use BackWeb, :model
+      use Ecto.Schema
 
-    schema "users" do
+    schema "categories" do
         field :name, :string
-        has_many :transactions, Back.Transaction 
-
-        timestamps()    
+        has_many :transactions, Back.Transaction
+ 
     end
 
     def changeset(struct, params \\%{}) do
