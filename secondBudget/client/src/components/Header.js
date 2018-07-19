@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-        <div>
-            Header
+        <div className='header'>
+            <h3>Kid Money Manager</h3>
         </div>
     );
   }

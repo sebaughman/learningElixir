@@ -1,28 +1,58 @@
-.App {
+.dashboard{
+  display: flex;
+  flex-direction: column;
+}
+.dashboardBody{
+  display: flex;
+  flex-direction: row;
+}
+.header{
+  width: 100%;
   text-align: center;
+  height: 70px;
+  background-color: antiquewhite;
+}
+.sideNav{
+  width: 25%;
+}
+.kidInfo{
+  width:75%;
+  background-color: rgb(241, 243, 243);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.popup-background {
+  background-color: rgba(0, 0, 0, .6);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.popup-content {
+  height: 60%;
+  width: 55%;
+  opacity: 1;
+  border-radius: 5px;
+  background-color: #052225;
+  border: 1px solid #328cc1;
+  color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 580px;
+  min-width: 300px;
 }

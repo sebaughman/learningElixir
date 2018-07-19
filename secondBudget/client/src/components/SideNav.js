@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class SideNav extends Component {
   render() {
     return (
-        <div>
+        <div className='sideNav'>
             SideNav
         </div>
     );

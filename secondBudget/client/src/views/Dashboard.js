@@ -8,28 +8,44 @@ import TransactionPopup from "../components/TransactionPopup"
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import '../App.css'
+
 
 class Dashboard extends Component {
+  constructor(){
+    super()
+    this.state = {
+      loading: true,
+      tempUser: 1,
+      kidPopupVisibility: 'hidden',
+      transactionPopupVisibility: 'hidden'
+    }
+  }
+
+  editPopupVisibility(popup, value){
+    this.setState({
+      [popup]: value
+    })
+  }
+
   render() {
     return (
-        <div>
-            Dashboard
+        <div className='dashboard'>
             <Header />
-            <SideNav />
-            <KidInfo />
-            <KidPopup />
-            <TransactionPopup />
+            <div className='dashboardBody'>
+              <SideNav />
+              <KidInfo tempUser={tempUser}/>
+            </div>
+            <div className='popup'>
+              <KidPopup visibility={this.state.kidPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>
+            </div>
+            <div className='popup'>
+              <TransactionPopup visibility={this.state.transactionPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>
+            </div>
         </div>
     );
   }
 }
 
-const kidsQuery = gql`
-          query {
-            allKids(userId:1){
-              name
-            }
-          }
-          `
 
-export default graphql(kidsQuery, { name: 'kids' })(Dashboard);
+export default Dashboard;
