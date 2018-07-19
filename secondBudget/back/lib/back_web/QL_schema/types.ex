@@ -24,7 +24,7 @@ defmodule BackWeb.Schema.Types do
     field :id, :id
     field :transaction_amount, :float
     field :kid_id, :id
-    field :category_id, :id
+    field :category, :category, resolve: assoc(:category)
   end
 
    object :category do
