@@ -1,0 +1,38 @@
+schema {
+  query: RootQueryType
+}
+
+type Category {
+  id: ID
+  name: String
+  transactions: [Transaction]
+}
+
+type Kid {
+  budgetAmount: Float
+  id: ID
+  name: String
+  transactions: [Transaction]
+  userId: ID
+}
+
+type RootQueryType {
+  allKids(userId: ID!): [Kid]
+  allTransactions(kidId: ID!): [Transaction]
+}
+
+type Transaction {
+  category: Category
+  id: ID
+  kidId: ID
+  transactionAmount: Float
+}
+
+type User {
+  email: String
+  googleId: String
+  id: ID
+  kids: [Kid]
+  name: String
+}
+

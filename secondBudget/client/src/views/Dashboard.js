@@ -5,8 +5,6 @@ import KidInfo from "../components/KidInfo"
 import KidPopup from "../components/KidPopup"
 import TransactionPopup from "../components/TransactionPopup"
 
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
 
 import '../App.css'
 
@@ -34,7 +32,7 @@ class Dashboard extends Component {
             <Header />
             <div className='dashboardBody'>
               <SideNav />
-              <KidInfo tempUser={tempUser}/>
+              <KidInfo tempUser={this.state.tempUser}/>
             </div>
             <div className='popup'>
               <KidPopup visibility={this.state.kidPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>
