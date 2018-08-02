@@ -13,6 +13,4 @@ class KidInfo extends Component {
   }
 }
 
-          
-
 export default KidInfo

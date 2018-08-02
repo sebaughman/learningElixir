@@ -31,8 +31,8 @@ class Dashboard extends Component {
         <div className='dashboard'>
             <Header />
             <div className='dashboardBody'>
-              <SideNav />
-              <KidInfo tempUser={this.state.tempUser}/>
+              <SideNav tempUser={this.state.tempUser}/>
+              <KidInfo />
             </div>
             <div className='popup'>
               <KidPopup visibility={this.state.kidPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>

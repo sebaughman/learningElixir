@@ -2,6 +2,9 @@ defmodule BackWeb.Schema.Types do
   use Absinthe.Schema.Notation
   use Absinthe.Ecto, repo: Back.Repo
 
+  #graphql requires types. ecto and absinthe makes this easier with the assoc function 
+  #in js you use the graqhql TYPE functions but ecto does not require it
+
   object :user do
     field :id, :id
     field :name, :string

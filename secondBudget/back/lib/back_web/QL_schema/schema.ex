@@ -3,7 +3,9 @@
   import_types BackWeb.Schema.Types
 
   alias  BackWeb.KidsResolver
-   alias  BackWeb.TransactionsResolver
+  alias  BackWeb.TransactionsResolver
+
+  #Where you define your types / queries / mutations for graphQL
   
   
   query do
