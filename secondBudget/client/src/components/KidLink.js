@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { createFragmentContainer} from 'react-relay';
 import { graphql } from 'relay-runtime'
+import {Link} from 'react-router-dom'
 
 
 class KidLink extends Component {
   render() {
     return (
         <div className='kidLink'>
-            {this.props.kid.name}
+           <Link to={`/dashboard/${this.props.kid.id}`}>{this.props.kid.name}</Link>
         </div>
     );
   }

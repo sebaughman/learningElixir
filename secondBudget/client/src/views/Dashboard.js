@@ -27,12 +27,13 @@ class Dashboard extends Component {
   }
 
   render() {
+    let kidId = this.props.match.params.kid
     return (
         <div className='dashboard'>
             <Header />
             <div className='dashboardBody'>
               <SideNav tempUser={this.state.tempUser}/>
-              <KidInfo />
+              <KidInfo kidId={kidId}/>
             </div>
             <div className='popup'>
               <KidPopup visibility={this.state.kidPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>

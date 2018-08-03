@@ -7,7 +7,7 @@ class KidInfo extends Component {
     return (
         <div className='kidInfo'>
             <Graph />
-            <TransactionBox kidId={1} />
+            <TransactionBox kidId={this.props.kidId} />
         </div>
     );
   }

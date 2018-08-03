@@ -23,3 +23,4 @@
 # Back.Repo.insert!(%Back.Transaction{kid_id: 1, transaction_amount: 50.00, category_id: 1})
 # Back.Repo.insert!(%Back.Transaction{kid_id: 2, transaction_amount: 20.00, category_id: 1})
 # Back.Repo.insert!(%Back.Transaction{kid_id: 3, transaction_amount: 10.00, category_id: 2})
+# Back.Repo.insert!(%Back.Transaction{kid_id: 1, transaction_amount: 10.00, category_id: 2})
