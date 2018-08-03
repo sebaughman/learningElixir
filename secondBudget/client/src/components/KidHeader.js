@@ -7,6 +7,7 @@ const KidHeaderQuery = graphql`
       kid(id: $id){
           name
           budgetAmount
+          amountRemaining
         }
   }
 `
@@ -21,7 +22,7 @@ render() {
           if (error) {
             return <div>{error.message}</div>
           } else if (props) {
-            return<div  className='kidHeader'> <h3>{props.kid.name}</h3> <br /> <p>Budget: {props.kid.budgetAmount}</p> </div>
+            return<div  className='kidHeader'> <h3>{props.kid.name}</h3> <br /> <p>Budget: {props.kid.budgetAmount}</p><br /> <p>Amount Remaining: {props.kid.amountRemaining}</p> </div>
           }
           return <div>Loading</div>
         }}

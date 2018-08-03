@@ -5,6 +5,7 @@ defmodule Back.Kid do
     schema "kids" do
         field :name, :string
         field :budget_amount, :decimal
+        field :amount_remaining, :decimal
         belongs_to :user, Back.User
         has_many :transactions, Back.Transaction
 

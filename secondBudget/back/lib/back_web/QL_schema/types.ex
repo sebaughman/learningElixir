@@ -18,6 +18,7 @@ defmodule BackWeb.Schema.Types do
     field :id, :id
     field :name, :string
     field :budget_amount, :float
+    field :amount_remaining, :float
     field :user_id, :id
 
     field :transactions, list_of(:transaction), resolve: assoc(:transactions)

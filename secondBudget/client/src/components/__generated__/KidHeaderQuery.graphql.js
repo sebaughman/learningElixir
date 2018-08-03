@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 0dcced338142129f2cf9de5084197e21
+ * @relayHash 0c9935f27c8014f14db5330e0791fafb
  */
 
 /* eslint-disable */
@@ -16,6 +16,7 @@ export type KidHeaderQueryResponse = {|
   +kid: ?{|
     +name: ?string,
     +budgetAmount: ?number,
+    +amountRemaining: ?number,
   |}
 |};
 export type KidHeaderQuery = {|
@@ -32,6 +33,7 @@ query KidHeaderQuery(
   kid(id: $id) {
     name
     budgetAmount
+    amountRemaining
     id
   }
 }
@@ -67,13 +69,20 @@ v3 = {
   "name": "budgetAmount",
   "args": null,
   "storageKey": null
+},
+v4 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "amountRemaining",
+  "args": null,
+  "storageKey": null
 };
 return {
   "kind": "Request",
   "operationKind": "query",
   "name": "KidHeaderQuery",
   "id": null,
-  "text": "query KidHeaderQuery(\n  $id: ID!\n) {\n  kid(id: $id) {\n    name\n    budgetAmount\n    id\n  }\n}\n",
+  "text": "query KidHeaderQuery(\n  $id: ID!\n) {\n  kid(id: $id) {\n    name\n    budgetAmount\n    amountRemaining\n    id\n  }\n}\n",
   "metadata": {},
   "fragment": {
     "kind": "Fragment",
@@ -92,7 +101,8 @@ return {
         "plural": false,
         "selections": [
           v2,
-          v3
+          v3,
+          v4
         ]
       }
     ]
@@ -113,6 +123,7 @@ return {
         "selections": [
           v2,
           v3,
+          v4,
           {
             "kind": "ScalarField",
             "alias": null,
@@ -127,5 +138,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '4a7e7aa89c327cf1ccfc7c3e156b0b93';
+(node/*: any*/).hash = 'ee79d7aeb2c529d09bfaaf2924982565';
 module.exports = node;

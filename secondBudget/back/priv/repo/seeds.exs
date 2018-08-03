@@ -13,9 +13,9 @@
 
 # Back.Repo.insert!(%Back.User{name: "Sarah", email: "srhbghmn@gmail.com", google_id: "google"})
 # Back.Repo.insert!(%Back.User{name: "Chris", email: "chris@gmail.com", google_id: "google"})
-# Back.Repo.insert!(%Back.Kid{name: "Maddie", budget_amount: 150.00, user_id: 1})
-# Back.Repo.insert!(%Back.Kid{name: "Ben", budget_amount: 100.00, user_id: 1})
-# Back.Repo.insert!(%Back.Kid{name: "Kelsey", budget_amount: 200.00, user_id: 2})
+# Back.Repo.insert!(%Back.Kid{name: "Maddie", budget_amount: 150.00, amount_remaining: 90.00, user_id: 1})
+# Back.Repo.insert!(%Back.Kid{name: "Ben", budget_amount: 100.00, amount_remaining: 80.00, user_id: 1})
+# Back.Repo.insert!(%Back.Kid{name: "Kelsey", budget_amount: 200.00, amount_remaining: 190.00, user_id: 2})
 
 # Back.Repo.insert!(%Back.Category{type: "fun", })
 # Back.Repo.insert!(%Back.Category{type: "food", })
