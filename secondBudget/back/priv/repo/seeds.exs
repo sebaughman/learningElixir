@@ -17,8 +17,8 @@
 # Back.Repo.insert!(%Back.Kid{name: "Ben", budget_amount: 100.00, user_id: 1})
 # Back.Repo.insert!(%Back.Kid{name: "Kelsey", budget_amount: 200.00, user_id: 2})
 
-# Back.Repo.insert!(%Back.Category{name: "fun", })
-# Back.Repo.insert!(%Back.Category{name: "food", })
+# Back.Repo.insert!(%Back.Category{type: "fun", })
+# Back.Repo.insert!(%Back.Category{type: "food", })
 
 # Back.Repo.insert!(%Back.Transaction{kid_id: 1, transaction_amount: 50.00, category_id: 1})
 # Back.Repo.insert!(%Back.Transaction{kid_id: 2, transaction_amount: 20.00, category_id: 1})

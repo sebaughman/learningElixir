@@ -32,7 +32,7 @@ defmodule BackWeb.Schema.Types do
 
    object :category do
     field :id, :id
-    field :name, :string
+    field :type, :string
 
     field :transactions, list_of(:transaction), resolve: assoc(:transactions)
   end

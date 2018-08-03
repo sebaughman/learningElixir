@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Graph from "./Graph"
-import TransactionList from "./TransactionList"
+import TransactionBox from "./TransactionBox"
 
 class KidInfo extends Component {
   render() {
     return (
         <div className='kidInfo'>
             <Graph />
-            <TransactionList />
+            <TransactionBox kidId={1} />
         </div>
     );
   }

@@ -5,14 +5,14 @@ defmodule Back.Category do
       #Ecto needs a schema as well so it knows what to expect and how to change it
 
     schema "categories" do
-        field :name, :string
+        field :type, :string
         has_many :transactions, Back.Transaction
  
     end
 
     def changeset(struct, params \\%{}) do
         struct
-        |> cast(params, [:name])
-        |>validate_required([:name])
+        |> cast(params, [:type])
+        |>validate_required([:type])
     end
 end

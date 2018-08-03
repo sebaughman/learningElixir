@@ -3,7 +3,7 @@ defmodule Back.Repo.Migrations.AddCategoriesTable do
 
   def change do
     create table(:categories) do
-      add :name, :string
+      add :type, :string
     end
   end
 end
