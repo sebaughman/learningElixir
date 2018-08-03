@@ -20,6 +20,11 @@
       resolve &TransactionsResolver.all_transactions/2
     end
 
+    field :kid, :kid do
+      arg :id, non_null(:id)
+      resolve &KidsResolver.kid/2
+    end
+    
   end
 
 

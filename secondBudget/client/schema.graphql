@@ -19,6 +19,7 @@ type Kid {
 type RootQueryType {
   allKids(userId: ID!): [Kid]
   allTransactions(kidId: ID!): [Transaction]
+  kid(id: ID!): Kid
 }
 
 type Transaction {

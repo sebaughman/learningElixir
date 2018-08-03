@@ -14,4 +14,12 @@ defmodule BackWeb.KidsResolver do
         {:ok, kids}
     end
 
+    def kid(%{id: id}, _info) do
+        query = from Kid,
+        where: [id: ^id]
+
+        kid = Repo.get(Kid, id)
+        {:ok, kid}
+    end
+
 end
