@@ -4,8 +4,8 @@ import environment from '../Environment'
 import KidList from './KidList'
 
 const SideNavQuery = graphql`
-  query SideNavQuery {
-      allKids(userId: 1){
+  query SideNavQuery($userId: ID!) {
+      allKids(userId: $userId){
           ...KidList_kids
         }
   }
@@ -16,8 +16,8 @@ render() {
       <QueryRenderer
         environment={environment}
         query={SideNavQuery}
+        variables={{userId: this.props.tempUser}}
         render={({error, props}) => {
-            console.log(props)
           if (error) {
             return <div>{error.message}</div>
           } else if (props) {
