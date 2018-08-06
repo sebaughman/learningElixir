@@ -11,7 +11,15 @@ class TransactionList extends Component {
     return (
 
         <div className='transactionList'>
-            {transactions}
+            <h3>Transactions</h3>
+            <table>
+                <tr>
+                    <th>Amount</th>
+                    <th>Category</th> 
+                </tr>
+                {transactions}
+            </table>
+            
         </div>
     );
   }

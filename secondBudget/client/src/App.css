@@ -1,3 +1,13 @@
+a{
+  text-decoration: none;
+  color:blue
+}
+a:visited{
+  text-decoration: none;
+}
+a:active{
+  color:rgb(25, 25, 116);
+}
 .dashboard{
   display: flex;
   flex-direction: column;
@@ -14,6 +24,18 @@
 }
 .kidList{
   width: 25%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.kidList h2{
+  margin-top:5px;
+}
+.kidLink{
+  margin:5px;
+}
+.selectedKid{
+  text-decoration: underline;
+  color: rgb(25, 156, 238);
 }
 .kidInfo{
   width:75%;
@@ -33,6 +55,24 @@
   margin-top: -15px;
   margin-bottom: 0px;
   font-size: .8em;
+}
+.graph{
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.graph p{
+  border: 1px solid black;
+  padding: 120px 170px 120px 170px;
+}
+.transactionList{
+  height:200px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 50px;
 }
 .popup {
   position: fixed;

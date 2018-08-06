@@ -32,7 +32,7 @@ class Dashboard extends Component {
         <div className='dashboard'>
             <Header />
             <div className='dashboardBody'>
-              <SideNav tempUser={this.state.tempUser}/>
+              <SideNav kidId={kidId} tempUser={this.state.tempUser}/>
               <KidInfo kidId={kidId}/>
             </div>
             <div className='popup'>

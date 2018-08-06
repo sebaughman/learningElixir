@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 class Graph extends Component {
   render() {
     return (
-        <div>
-            Graph
+        <div className='graph'>
+            <p>Graph</p>
         </div>
     );
   }
 }
 
-export default Graph;
+export default Graph; 

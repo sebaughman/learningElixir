@@ -8,7 +8,7 @@ class KidLink extends Component {
   render() {
     return (
         <div className='kidLink'>
-           <Link to={`/dashboard/${this.props.kid.id}`}>{this.props.kid.name}</Link>
+           <Link to={`/dashboard/${this.props.kid.id}`}><div className={this.props.kid.id === this.props.kidId ? 'selectedKid': ''}>{this.props.kid.name}</div></Link>
         </div>
     );
   }

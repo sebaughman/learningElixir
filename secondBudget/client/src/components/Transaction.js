@@ -6,9 +6,12 @@ import { graphql } from 'relay-runtime'
 class Transaction extends Component {
   render() {
     return (
-        <div className='transaction'>
-            {this.props.transaction.transactionAmount} ({this.props.transaction.category.type})
-        </div>
+
+          <tr className='transaction'>
+            <th>${this.props.transaction.transactionAmount}</th>
+            <th>{this.props.transaction.category.type}</th> 
+          </tr>
+
     );
   }
 }
