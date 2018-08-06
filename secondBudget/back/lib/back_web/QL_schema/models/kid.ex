@@ -14,7 +14,7 @@ defmodule Back.Kid do
 
     def changeset(struct, params \\%{}) do
         struct
-        |> cast(params, [:name, :budget_amount])
+        |> cast(params, [:name, :budget_amount, :amount_remaining, :user_id])
         |> validate_required([:name, :budget_amount])
     end
 end
