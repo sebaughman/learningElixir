@@ -22,10 +22,35 @@ a:active{
   height: 70px;
   background-color: antiquewhite;
 }
+.aside{
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.addKidButton{
+  height: 30px;
+  background-color: rgb(196, 102, 102);
+  font-size: 1em;
+  border-radius: 5px;
+  width:85%;
+  align-self: center;
+}
+.kidPopup{
+  height:90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.kidPopup input {
+  margin: 10px;
+}
 .kidList{
-  width: 25%;
   margin-left: 20px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .kidList h2{
   margin-top:5px;
@@ -38,7 +63,7 @@ a:active{
   color: rgb(25, 156, 238);
 }
 .kidInfo{
-  width:75%;
+  width:80%;
   background-color: rgb(241, 243, 243);
   display: flex;
   flex-direction: column;
@@ -68,11 +93,11 @@ a:active{
 }
 .transactionList{
   height:200px;
+  width: 95%;
   display:flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .popup {
   position: fixed;
@@ -99,9 +124,9 @@ a:active{
   width: 55%;
   opacity: 1;
   border-radius: 5px;
-  background-color: #052225;
-  border: 1px solid #328cc1;
-  color: #e3e3e3;
+  background-color: #948373;
+  border: 1px solid #53410d;
+  color: #181616;
   display: flex;
   flex-direction: column;
   padding: 10px;

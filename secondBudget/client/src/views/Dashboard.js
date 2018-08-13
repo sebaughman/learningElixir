@@ -32,14 +32,17 @@ class Dashboard extends Component {
         <div className='dashboard'>
             <Header />
             <div className='dashboardBody'>
-              <SideNav kidId={kidId} tempUser={this.state.tempUser}/>
+              <div className='aside'>
+                <SideNav kidId={kidId} tempUser={this.state.tempUser}/>
+                <button className='addKidButton' onClick={(popup, value)=>this.editPopupVisibility('kidPopupVisibility', 'visible')}>Add Kid</button>
+              </div>
               <KidInfo kidId={kidId}/>
             </div>
             <div className='popup'>
-              <KidPopup visibility={this.state.kidPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>
+              <KidPopup tempUser={this.state.tempUser} visibility={this.state.kidPopupVisibility} editPopupVisibility={(popup, value)=>this.editPopupVisibility(popup, value)}/>
             </div>
             <div className='popup'>
-              <TransactionPopup visibility={this.state.transactionPopupVisibility} editPopupVisibility={(name, value)=>this.editPopupVisibility(name, value)}/>
+              <TransactionPopup visibility={this.state.transactionPopupVisibility} editPopupVisibility={(popup, value)=>this.editPopupVisibility(popup, value)}/>
             </div>
         </div>
     );

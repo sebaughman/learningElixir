@@ -21,7 +21,7 @@ render() {
           if (error) {
             return <div>{error.message}</div>
           } else if (props) {
-            return <KidList kids={props.allKids} kidId={this.props.kidId}/>
+            return <KidList kids={props.allKids} kidId={this.props.kidId}/> 
           }
           return <div>Loading</div>
         }}
@@ -31,4 +31,4 @@ render() {
 
 }
 
-export default SideNav
+export default SideNav 
